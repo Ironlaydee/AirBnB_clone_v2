@@ -6,6 +6,7 @@ import datetime
 from uuid import UUID
 import json
 import os
+import pycodestyle
 
 
 class test_basemodel(unittest.TestCase):
@@ -97,3 +98,12 @@ class test_basemodel(unittest.TestCase):
         n = new.to_dict()
         new = BaseModel(**n)
         self.assertFalse(new.created_at == new.updated_at)
+
+    def test_pycodestyle(self):
+        """ Checks for pep8 coding style. """
+        pepdocstyle = pycodestyle.StyleGuide(quiet=True)
+        result = pepdocstyle.check_files(['models/base_model.py'])
+        self.assertEqual(result.total_errors, 0, "pycodestyle incompliant.")
+
+if __name__ == "__main__":
+    unittest.main()
