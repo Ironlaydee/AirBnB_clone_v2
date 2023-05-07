@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Fabric script that distributes an archive to your web servers
+A Fabric script that distributes an archive to your web servers
 """
 
 from datetime import datetime
 from fabric.api import *
 import os
 
-env.hosts = ["52.91.121.146", "3.85.136.181"]
+env.hosts = ["52.204.168.90", "52.3.241.251"]
 env.user = "ubuntu"
 
 
