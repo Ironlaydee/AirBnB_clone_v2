@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Fabfile to create and distribute an archive to a web server.
+# A Fabric file to create and distribute an archive to a web server.
 import os.path
 from datetime import datetime
 from fabric.api import env
@@ -7,7 +7,7 @@ from fabric.api import local
 from fabric.api import put
 from fabric.api import run
 
-env.hosts = ["52.91.121.146", "3.85.136.181"]
+env.hosts = ["52.204.168.90", "52.3.241.251"]
 
 
 def do_pack():
